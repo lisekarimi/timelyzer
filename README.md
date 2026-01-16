@@ -18,8 +18,8 @@ This project focuses on time series forecasting using a variety of statistical a
 ## 🛠️ Prerequisites
 - Software:
     - Python 3.x
-    - uv
-    - Cloud-based or browser-based notebook environments (Jupyter Notebook, Kaggle Notebooks, Google Colab ...)
+    - [uv](https://docs.astral.sh/uv/getting-started/installation/)
+    - An IDE (VS Code, PyCharm, etc.) or cloud-based notebook environments (Kaggle Notebooks, Google Colab ...)
 
 - Skills:
     - Solid understanding of statistics, machine learning (ARIMA, Prophet, and modern deep learning models like Transformers and Temporal Fusion Transformers TFT)
@@ -34,7 +34,7 @@ To run the notebooks locally:
    uv sync
    ```
 
-2. Open the notebook in your preferred environment (Jupyter Notebook, VS Code, etc.)
+2. Open the notebook in your preferred IDE (VS Code, PyCharm, etc.)
 
 3. Select the kernel that was created by `uv sync` (usually named `.venv` or `timelyzer`)
 
