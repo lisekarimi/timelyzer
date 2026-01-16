@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Timelyzer - Advanced time series forecasting with statistical and ML models">
+    <title>Timelyzer | Time Series Forecasting</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .tech-badge {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Hero Section -->
+    <section class="gradient-bg min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute -top-1/2 -right-1/2 w-full h-full bg-purple-500 rounded-full opacity-20 blur-3xl float-animation"></div>
+            <div class="absolute -bottom-1/2 -left-1/2 w-full h-full bg-indigo-500 rounded-full opacity-20 blur-3xl float-animation" style="animation-delay: 3s;"></div>
+        </div>
+
+        <div class="max-w-6xl mx-auto text-center relative z-10">
+            <div class="inline-block mb-6">
+                <span class="px-4 py-2 rounded-full bg-white bg-opacity-20 text-white text-sm font-semibold backdrop-blur-md">
+                    Statistical & ML-Powered Forecasting
+                </span>
+            </div>
+
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                Timelyzer
+            </h1>
+
+            <p class="text-xl md:text-2xl text-gray-100 mb-12 max-w-3xl mx-auto font-light">
+                Advanced time series analysis leveraging <span class="font-semibold">Prophet</span>, <span class="font-semibold">SARIMA</span>, and <span class="font-semibold">SARIMAX</span> models for predictive analytics
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-4 mb-16">
+                <span class="tech-badge px-5 py-2.5 rounded-lg text-white font-medium border border-white border-opacity-30">
+                    🔮 Prophet
+                </span>
+                <span class="tech-badge px-5 py-2.5 rounded-lg text-white font-medium border border-white border-opacity-30">
+                    📈 ARIMA/SARIMA
+                </span>
+                <span class="tech-badge px-5 py-2.5 rounded-lg text-white font-medium border border-white border-opacity-30">
+                    🎯 SARIMAX
+                </span>
+                <span class="tech-badge px-5 py-2.5 rounded-lg text-white font-medium border border-white border-opacity-30">
+                    📊 Statistical Analysis
+                </span>
+            </div>
+
+            <a href="#projects" class="inline-block px-8 py-4 bg-white text-purple-600 rounded-lg font-semibold text-lg hover:bg-opacity-90 transition-all shadow-2xl hover:shadow-3xl hover:scale-105">
+                Explore Projects
+            </a>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+                <span class="gradient-text">Why Timelyzer?</span>
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-8">
+                    <div class="w-16 h-16 mx-auto mb-6 gradient-bg rounded-2xl flex items-center justify-center text-3xl">
+                        🎯
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Multi-Model Ensemble</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Comparative analysis across Prophet, ARIMA, SARIMA, and SARIMAX for optimal forecast accuracy
+                    </p>
+                </div>
+
+                <div class="text-center p-8">
+                    <div class="w-16 h-16 mx-auto mb-6 gradient-bg rounded-2xl flex items-center justify-center text-3xl">
+                        ⚡
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Rigorous Evaluation</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Cross-validation, decomposition analysis, and comprehensive performance metrics (RMSE, MAE, MAPE)
+                    </p>
+                </div>
+
+                <div class="text-center p-8">
+                    <div class="w-16 h-16 mx-auto mb-6 gradient-bg rounded-2xl flex items-center justify-center text-3xl">
+                        🔬
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Production-Ready</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        End-to-end pipeline from EDA to deployment with reproducible methodologies
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
+                <span class="gradient-text">Featured Notebooks</span>
+            </h2>
+            <p class="text-center text-gray-600 mb-16 text-lg">
+                Explore production-grade time series implementations
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden card-hover">
+                    <div class="gradient-bg h-2"></div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-4xl">🚦</span>
+                            <h3 class="text-2xl font-bold text-gray-800">Traffic Flow Forecasting</h3>
+                        </div>
+
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Multivariate time series analysis of road traffic patterns using Prophet, SARIMA, and SARIMAX with exogenous variables and seasonality decomposition
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Prophet</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">SARIMA</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">SARIMAX</span>
+                        </div>
+
+                        <a href="https://github.com/lisekarimi/timelyzer"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="inline-flex items-center gap-2 px-6 py-3 gradient-bg text-white rounded-lg font-semibold hover:opacity-90 transition-all">
+                            View on GitHub
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden card-hover">
+                    <div class="gradient-bg h-2"></div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-4xl">📈</span>
+                            <h3 class="text-2xl font-bold text-gray-800">AAPL Stock Prediction</h3>
+                        </div>
+
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Financial time series forecasting of Apple stock prices with comparative analysis of Prophet and ARIMA models, featuring stationarity testing and trend analysis
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Prophet</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">ARIMA</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">Financial Data</span>
+                        </div>
+
+                        <a href="https://github.com/lisekarimi/timelyzer"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="inline-flex items-center gap-2 px-6 py-3 gradient-bg text-white rounded-lg font-semibold hover:opacity-90 transition-all">
+                            View on GitHub
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12">
+                <span class="gradient-text">Technical Stack</span>
+            </h2>
+
+            <div class="flex flex-wrap justify-center gap-6">
+                <div class="px-6 py-4 bg-gray-50 rounded-xl border-2 border-gray-200 hover:border-purple-400 transition-all">
+                    <p class="font-semibold text-gray-700">Python 3.x</p>
+                </div>
+                <div class="px-6 py-4 bg-gray-50 rounded-xl border-2 border-gray-200 hover:border-purple-400 transition-all">
+                    <p class="font-semibold text-gray-700">Prophet</p>
+                </div>
+                <div class="px-6 py-4 bg-gray-50 rounded-xl border-2 border-gray-200 hover:border-purple-400 transition-all">
+                    <p class="font-semibold text-gray-700">Statsmodels</p>
+                </div>
+                <div class="px-6 py-4 bg-gray-50 rounded-xl border-2 border-gray-200 hover:border-purple-400 transition-all">
+                    <p class="font-semibold text-gray-700">Pandas</p>
+                </div>
+                <div class="px-6 py-4 bg-gray-50 rounded-xl border-2 border-gray-200 hover:border-purple-400 transition-all">
+                    <p class="font-semibold text-gray-700">NumPy</p>
+                </div>
+                <div class="px-6 py-4 bg-gray-50 rounded-xl border-2 border-gray-200 hover:border-purple-400 transition-all">
+                    <p class="font-semibold text-gray-700">Scikit-learn</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio CTA Section -->
+    <section class="py-16 px-4 bg-gray-50">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="bg-white rounded-2xl shadow-lg p-12 border-2 border-purple-100">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-gray-800">
+                    Explore More ML Projects
+                </h2>
+                <p class="text-gray-600 mb-8 text-lg">
+                    Discover other machine learning and data science projects in our portfolio
+                </p>
+                <a href="https://lisekarimi.com"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2 px-8 py-4 gradient-bg text-white rounded-lg font-semibold text-lg hover:opacity-90 transition-all shadow-xl hover:scale-105">
+                    Visit Portfolio
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg py-12 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-white text-lg mb-4 font-medium">Timelyzer</p>
+            <p class="text-gray-200 text-sm">
+                Advanced Time Series Forecasting | Statistical & ML Models
+            </p>
+            <div class="mt-6">
+                <a href="https://github.com/lisekarimi/timelyzer" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-200 transition-colors">
+                    <svg class="w-8 h-8 mx-auto" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

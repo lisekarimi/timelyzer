@@ -1,0 +1,5 @@
+.ipynb_checkpoints/
+uv.lock
+.venv/
+.env
+*.csv
